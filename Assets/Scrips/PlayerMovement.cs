@@ -30,8 +30,27 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float basicSpeed = 5.0f;
     [SerializeField] private float delayTime = 1.0f;
 
+    [SerializeField] private GameObject rightBorderObj;
+    [SerializeField] private GameObject leftBorderObj;
+    [SerializeField] private GameObject topBorderObj;
+    [SerializeField] private GameObject bottomBorderObj;
+
+    private float rightBorder;
+    private float leftBorder;
+    private float topBorder;
+    private float bottomBorder;
+
     private bool isDelaying = true;
     private List<MovementQueue> movementQueue = new List<MovementQueue>();
+
+    private void Start()
+    {
+        //Set border
+        rightBorder = rightBorderObj.transform.position.x;
+        leftBorder = leftBorderObj.transform.position.x;
+        topBorder = topBorderObj.transform.position.y;
+        bottomBorder = bottomBorderObj.transform.position.y;
+    }
 
     private void Update()
     {
@@ -104,6 +123,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(Vector3 movement)
     {
-        transform.position += movement;
+        float x = Mathf.Clamp(transform.position.x + movement.x, leftBorder, rightBorder);
+        float y = Mathf.Clamp(transform.position.y + movement.y, bottomBorder, topBorder);
+
+        transform.position = new Vector3(x,y, 0);
     }
 }
