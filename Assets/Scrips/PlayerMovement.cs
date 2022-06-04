@@ -35,12 +35,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject topBorderObj;
     [SerializeField] private GameObject bottomBorderObj;
 
+    [SerializeField] private bool isDelaying = true;
+
     private float rightBorder;
     private float leftBorder;
     private float topBorder;
     private float bottomBorder;
 
-    private bool isDelaying = true;
     private List<MovementQueue> movementQueue = new List<MovementQueue>();
 
     private void Start()
