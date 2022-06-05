@@ -51,6 +51,9 @@ public class PlayerMovement : MonoBehaviour
         leftBorder = leftBorderObj.transform.position.x;
         topBorder = topBorderObj.transform.position.y;
         bottomBorder = bottomBorderObj.transform.position.y;
+
+        //Animation
+        gameObject.GetComponent<Animator>().SetBool("delayed", isDelaying);
     }
 
     private void Update()
@@ -71,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
     public void Delay(bool shouldDelay)
     {
         isDelaying = shouldDelay;
+
+        gameObject.GetComponent<Animator>().SetBool("delayed", shouldDelay);
     }
 
     private Vector3 InputMovement()
