@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BulletHit : MonoBehaviour
 {
+    [SerializeField] private GameObject mainPartObj;
     [SerializeField] private GameObject directorObj;
     private PointManagement director;
 
@@ -23,5 +24,6 @@ public class BulletHit : MonoBehaviour
     private void Hitted()
     {
         director.Hitted();
+        mainPartObj.GetComponent<Animator>().SetTrigger("hitted");
     }
 }
