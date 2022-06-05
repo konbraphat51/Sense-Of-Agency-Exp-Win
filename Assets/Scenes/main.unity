@@ -1013,7 +1013,7 @@ PrefabInstance:
       objectReference: {fileID: 60931879}
     - target: {fileID: 6251066834878500659, guid: d9907b8e47eb7f54f915ebf0a39636e4, type: 3}
       propertyPath: isDelaying
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6251066834878500659, guid: d9907b8e47eb7f54f915ebf0a39636e4, type: 3}
       propertyPath: topBorderObj
