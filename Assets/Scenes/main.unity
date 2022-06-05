@@ -212,6 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60931880}
   - component: {fileID: 60931881}
+  - component: {fileID: 60931882}
   m_Layer: 5
   m_Name: Director
   m_TagString: Untagged
@@ -250,10 +251,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d35fb12363dee48bb5a62fc196ed12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilDelayStop: 40
   pointDisplyObj: {fileID: 29413013}
   highScoreDisplyObj: {fileID: 1050266607}
   pointMultiply: 10
+--- !u!114 &60931882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60931879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3595ecebc1fc813439307a780ad856f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 755636662}
+  delayingTime: 10
 --- !u!1 &234851427
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +535,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &755636662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2319514731787934335, guid: d9907b8e47eb7f54f915ebf0a39636e4, type: 3}
+  m_PrefabInstance: {fileID: 5110771394788014881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050266607
 GameObject:
   m_ObjectHideFlags: 0

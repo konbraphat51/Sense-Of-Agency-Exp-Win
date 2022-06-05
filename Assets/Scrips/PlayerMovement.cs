@@ -42,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
     private float topBorder;
     private float bottomBorder;
 
+    private float delayStopTime;
+
     private List<MovementQueue> movementQueue = new List<MovementQueue>();
 
     private void Start()
@@ -133,5 +135,10 @@ public class PlayerMovement : MonoBehaviour
         float y = Mathf.Clamp(transform.position.y + movement.y, bottomBorder, topBorder);
 
         transform.position = new Vector3(x,y, 0);
+    }
+
+    public bool IsDelaying()
+    {
+        return isDelaying;
     }
 }

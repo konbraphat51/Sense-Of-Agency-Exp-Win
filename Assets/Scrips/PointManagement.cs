@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class PointManagement : MonoBehaviour
 {
-    [SerializeField] private float timeUntilDelayStop = 40.0f;
     [SerializeField] private GameObject pointDisplyObj;
     private Text pointDisply;
     [SerializeField] private GameObject highScoreDisplyObj;
