@@ -1031,8 +1031,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 60931879}
     - target: {fileID: 6251066834878500659, guid: d9907b8e47eb7f54f915ebf0a39636e4, type: 3}
+      propertyPath: delayTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251066834878500659, guid: d9907b8e47eb7f54f915ebf0a39636e4, type: 3}
       propertyPath: isDelaying
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6251066834878500659, guid: d9907b8e47eb7f54f915ebf0a39636e4, type: 3}
       propertyPath: topBorderObj
